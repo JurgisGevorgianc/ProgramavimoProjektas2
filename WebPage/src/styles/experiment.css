@@ -131,6 +131,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-primary);
   font-weight: 800;
   letter-spacing: -0.02em;
+  padding-right: 10px;
 }
 h1 { font-size: var(--fs-800); }
 h2 { font-size: var(--fs-700); }

@@ -1,4 +1,4 @@
-import React from "react";
+//import React from "react";
 
 
 export interface HeaderProps {
@@ -12,11 +12,9 @@ export interface HeaderProps {
 
 
 export default function Header({
-  title = "Main Page",
+  title = "askKTU",
   logo,
   onToggleSidebar,
-  onToggleTheme,
-  theme = "light"
 }: HeaderProps) {
   return (
     <>
@@ -42,6 +40,7 @@ export default function Header({
         }}
       >
         <div className="cluster">
+		<h1>{title}</h1>
           {logo ? (
             <a href="/" aria-label="Home">
               <img

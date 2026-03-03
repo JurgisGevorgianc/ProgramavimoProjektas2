@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+//import React, { useState } from "react";
 import PageLayout from "../../components/layout/PageLayout/PageLayout";
 import Header from "../../components/layout/Header/Header";
-import Sidebar from "../../components/layout/Sidebar/Sidebar";
+//import Sidebar from "../../components/layout/Sidebar/Sidebar";
 import { TopNav } from "../../components/layout/TopNav/TopNav";
 import RightPanel from "../../components/layout/RightPanel/RightPanel";
 import Footer from "../../components/layout/Footer/Footer";
@@ -12,19 +12,6 @@ export interface HomePageProps {
   theme: "light" | "dark";
   onToggleTheme: () => void;
 }
-
-const sidebarItems = [
-  { id: "chat-1", label: "Admission question" },
-  { id: "chat-2", label: "Dormitory prices" },
-  { id: "chat-3", label: "Exam retake rules" }
-];
-
-const sources = [
-  { id: "s1", name: "KTU Regulations PDF", href: "#" },
-  { id: "s2", name: "Scholarships 2025 Page", href: "#" },
-  { id: "s3", name: "Dormitory Handbook", href: "#" }
-];
-
 
 export default function HomePage({ theme, onToggleTheme }: HomePageProps) {
   return (
@@ -39,24 +26,15 @@ export default function HomePage({ theme, onToggleTheme }: HomePageProps) {
       }
       topNav={<TopNav />}
       //leftColumn={<Sidebar items={sidebarItems} />} // cia history
-      /*rightMain={
+      rightMain={
         <>
           <section className="chat" aria-label="Chat">
-            <div className="bubbles" aria-live="polite">
-              <span className="bubble">Hello! How can I help you today?</span>
-              <span className="bubble bubble-alt">What are the dormitory prices?</span>
-              <span className="bubble">For 2025/26, prices start from €XX depending on room type.</span>
-            </div>
-
-            <div className="ask">
-              <input className="input" placeholder="Ask something about KTU…" aria-label="Ask" />
-              <button className="btn btn--primary" type="button">Send</button>
-            </div>
+            
           </section>
 		
-          <RightPanel sources={sources} /> 
+          <RightPanel /> 
         </>
-      }*/
+      }
       footer={<Footer />}
     />
   );
